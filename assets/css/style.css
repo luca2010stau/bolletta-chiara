@@ -61,6 +61,44 @@ nav a:hover {
   color: var(--link-hover);
 }
 
+---
+
+/* ===== ICONE GENERALI (Phone, Search, Upload) ===== */
+/* Stili di base per tutte le icone che useremo con background-image */
+.icona {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+}
+
+.icona-phone {
+    background-image: url('asset/img/phone.png'); /* PERCORSO CORRETTO */
+}
+
+.icona-search {
+    background-image: url('asset/img/search.png'); /* PERCORSO CORRETTO */
+}
+
+.icona-upload {
+    background-image: url('asset/img/upload.png'); /* PERCORSO CORRETTO */
+}
+
+/* --- OPTIONAL: Stili per un'icona cliccabile --- */
+a .icona {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover .icona {
+    opacity: 0.8;
+}
+
+---
+
 /* ===== MAIN CONTENT ===== */
 main {
   max-width: 960px;
@@ -138,7 +176,7 @@ footer {
   font-size: 0.9em;
 }
 
-/* ===== WHATSAPP ===== */
+/* ===== ICONA WHATSAPP (specifica, dato che ha già una classe .whatsapp) ===== */
 .whatsapp {
   position: fixed;
   bottom: 20px;
@@ -146,8 +184,21 @@ footer {
   z-index: 999;
 }
 .whatsapp img {
-  width: 50px;
+  width: 50px; /* Mantieni la larghezza specifica per l'icona flottante di WhatsApp */
+  /* PERCORSO CORRETTO ANCHE QUI */
+  content: url('asset/img/icona whatsapp.png'); /* Usa content per un'immagine diretta in CSS */
 }
+/* Se usassi un <span>/<a> qui, il CSS sarebbe:
+.whatsapp .icona-whatsapp-float {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url('asset/img/icona whatsapp.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+*/
 
 /* ===== THEME TOGGLE BUTTON ===== */
 .theme-toggle {
