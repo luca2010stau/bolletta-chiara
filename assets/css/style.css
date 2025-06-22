@@ -66,37 +66,48 @@ nav a:hover {
 /* ===== ICONE GENERALI (Phone, Search, Upload) ===== */
 /* Stili di base per tutte le icone che useremo con background-image */
 .icona {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    vertical-align: middle;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
 }
 
 .icona-phone {
-    background-image: url('asset/img/phone.png'); /* PERCORSO CORRETTO */
+  background-image: url('../img/phone.png'); /* ✅ percorso corretto */
 }
 
 .icona-search {
-    background-image: url('asset/img/search.png'); /* PERCORSO CORRETTO */
+  background-image: url('../img/search.png'); /* ✅ percorso corretto */
 }
 
 .icona-upload {
-    background-image: url('asset/img/upload.png'); /* PERCORSO CORRETTO */
+  background-image: url('../img/upload.png'); /* ✅ percorso corretto */
 }
 
 /* --- OPTIONAL: Stili per un'icona cliccabile --- */
 a .icona {
-    text-decoration: none;
-    cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 a:hover .icona {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
+/* ===== ICONA WHATSAPP (specifica per immagine flottante) ===== */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+.whatsapp img {
+  width: 50px;
+  content: url('../img/icona-whatsapp.png'); /* ✅ percorso corretto */
+}
 ---
 
 /* ===== MAIN CONTENT ===== */
