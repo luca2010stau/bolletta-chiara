@@ -106,7 +106,7 @@ a:hover .icona {
 }
 .whatsapp img {
   width: 50px;
-  content: url('../img/icona-whatsapp.png'); /* ✅ percorso corretto */
+  content: url('../img/whatsapp-icon.png'); /* ✅ percorso corretto */
 }
 ---
 
