@@ -149,26 +149,57 @@ article p:last-child a:hover {
 }
 
 /* ===== FORM ===== */
-form input, form textarea {
+#form-contatto {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"],
+textarea {
   width: 100%;
   padding: 12px;
-  margin-top: 6px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
 }
-form input[type="submit"] {
-  background-color: var(--accent-color);
+
+.submit-button {
+  background-color: #25d366;
   color: white;
-  border: none;
   font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
-  margin-top: 10px;
-  padding: 12px 20px;
   transition: background 0.3s;
 }
-form input[type="submit"]:hover {
-  background-color: #1e7e34;
+
+.submit-button:hover {
+  background-color: #128c7e;
+}
+
+.form-feedback {
+  color: green;
+  font-weight: bold;
+  margin-top: 15px;
+  text-align: center;
 }
 
 /* ===== IMMAGINI ===== */
