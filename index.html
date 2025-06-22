@@ -229,6 +229,18 @@
     }
   });
 </script>
+<!-- altri contenuti HTML -->
 
+<script>
+  const form = document.getElementById('form-contatto');
+  const feedback = document.getElementById('form-feedback');
+
+  form.addEventListener('submit', function (event) {
+    setTimeout(() => {
+      feedback.hidden = false;
+      feedback.textContent = '✅ Messaggio inviato con successo!';
+    }, 500);
+  });
+</script>
 </body>
 </html>
