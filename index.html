@@ -242,5 +242,23 @@
     }, 500);
   });
 </script>
+<script>
+  const form = document.getElementById('form-contatto');
+  const feedback = document.getElementById('form-feedback');
+  const button = form.querySelector('.submit-button');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    button.textContent = 'Inviando...';
+    button.disabled = true;
+
+    setTimeout(() => {
+      feedback.classList.add('show');
+      form.reset();
+      button.textContent = 'Messaggio Inviato ✅';
+      button.style.backgroundColor = '#0b8e66';
+    }, 1000);
+  });
+</script>
 </body>
 </html>
