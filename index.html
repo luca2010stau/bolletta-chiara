@@ -165,20 +165,35 @@
   <h2>Prenota la tua consulenza gratuita</h2>
   <p>Compila il modulo qui sotto e allega la tua bolletta per ricevere un’analisi personalizzata.</p>
 
-  <form action="send.php" method="POST" enctype="multipart/form-data" class="form-box" id="form-contatto">
-    <input type="file" name="allegato" />
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" required />
+ <form name="contatto" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="form-contatto">
+  <input type="hidden" name="form-name" value="contatto">
+  <p hidden>
+    <label>Non compilare questo campo: <input name="bot-field" /></label>
+  </p>
 
-    <label for="email">La tua Email:</label>
-    <input type="email" id="email" name="email" required />
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" name="nome" required>
+  </div>
 
-    <label for="allegato">📎 Allega bolletta o documento (PDF/JPG/PNG):</label>
-    <input type="file" id="allegato" name="allegato" accept=".pdf,.jpg,.jpeg,.png" required class="input-file" />
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+  </div>
 
-    <button type="submit" class="submit-button">📨 Invia richiesta</button>
-  </form>
+  <div class="form-group">
+    <label for="messaggio">Messaggio</label>
+    <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
+  </div>
 
+  <div class="form-group">
+    <label for="allegato">Allega un file</label>
+    <input type="file" id="allegato" name="allegato">
+  </div>
+
+  <button type="submit" class="submit-button">Invia Messaggio</button>
+  <p id="form-feedback" class="form-feedback" hidden>✅ Messaggio inviato con successo!</p>
+</form>
   <p style="margin-top: 20px; font-weight: bold;">
     📲 Oppure <a href="https://wa.me/393277545377?text=Ciao%20Luca%2C%20ti%20invio%20la%20mia%20bolletta%20per%20una%20consulenza." target="_blank">
       scrivimi su WhatsApp e allega la bolletta
