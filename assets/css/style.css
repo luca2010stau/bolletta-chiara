@@ -186,7 +186,7 @@ footer {
 .whatsapp img {
   width: 50px; /* Mantieni la larghezza specifica per l'icona flottante di WhatsApp */
   /* PERCORSO CORRETTO ANCHE QUI */
-  content: url('asset/img/icona whatsapp.png'); /* Usa content per un'immagine diretta in CSS */
+  content: url('../img/icona-whatsapp.png');
 }
 /* Se usassi un <span>/<a> qui, il CSS sarebbe:
 .whatsapp .icona-whatsapp-float {
