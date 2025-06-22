@@ -201,6 +201,50 @@ textarea {
   margin-top: 15px;
   text-align: center;
 }
+/* ===== MIGLIORIE FORM STILE MODERNO ===== */
+body {
+  background: linear-gradient(135deg, #f9fafa, #d0eaff);
+}
+
+input:focus,
+textarea:focus {
+  border-color: #25d366;
+  box-shadow: 0 0 8px rgba(37, 211, 102, 0.3);
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.submit-button {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.submit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 18px rgba(18, 140, 126, 0.4);
+}
+
+.form-feedback {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+  text-align: center;
+  color: #128c7e;
+  font-weight: bold;
+}
+
+.form-feedback.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* ===== IMMAGINI ===== */
 img.responsive {
