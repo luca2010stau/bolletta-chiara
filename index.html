@@ -2,84 +2,131 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luca Staurenghi - Consulente Energetico</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Risparmia sulle bollette luce e gas con la consulenza gratuita di Luca Staurenghi, esperto del mercato energia.">
+  <title>Consulente Energia - Luca Staurenghi</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body>
 
-  <header class="bg-white shadow-md p-6">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Luca Staurenghi</h1>
-      <nav>
-        <ul class="flex space-x-6">
-          <li><a href="#servizi" class="hover:text-blue-600">Servizi</a></li>
-          <li><a href="#contatti" class="hover:text-blue-600">Contatti</a></li>
-        </ul>
-      </nav>
+  <!-- Popup Benvenuto -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <p>Benvenuto! Scopri come risparmiare sulle tue bollette.</p>
+      <button onclick="closePopup()">Chiudi</button>
     </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Consulenza Energetica Gratuita</h1>
+    <p>Con Luca Staurenghi - Esperto del mercato luce e gas</p>
   </header>
 
-  <main class="max-w-5xl mx-auto px-4 py-10">
-    <section class="mb-12">
-      <h2 class="text-3xl font-semibold mb-4">Consulenze Luce e Gas</h2>
-      <p class="text-lg">
-        Ti aiuto a risparmiare sulle bollette analizzando gratuitamente il tuo contratto attuale e proponendoti l'offerta migliore tra decine di fornitori. Collaboro con <strong>Konsulto.it</strong>, il primo comparatore fisico in Italia.
-      </p>
-    </section>
+  <!-- HERO -->
+  <section class="hero" data-aos="fade-up">
+    <h2>Stanco di pagare troppo per luce e gas?</h2>
+    <p>Analizzo la tua bolletta e ti consiglio il contratto migliore per te.</p>
+    <a href="#contatto" class="btn">Richiedi una consulenza gratuita</a>
+  </section>
 
-    <section id="servizi" class="mb-16">
-      <h3 class="text-2xl font-semibold mb-4">Cosa Posso Fare per Te</h3>
-      <ul class="list-disc list-inside space-y-2">
-        <li>Analisi gratuita delle tue bollette attuali</li>
-        <li>Proposte personalizzate per famiglie e aziende</li>
-        <li>Assistenza nella sottoscrizione del nuovo contratto</li>
-        <li>Supporto post-attivazione</li>
-      </ul>
-    </section>
+  <!-- PERCHE SCEGLIERMI -->
+  <section class="perche" data-aos="fade-right">
+    <h2>Perché affidarti a un consulente?</h2>
+    <ul>
+      <li>✅ Zero costi per te</li>
+      <li>✅ Analisi imparziale della bolletta</li>
+      <li>✅ Accesso a tariffe non pubblicizzate online</li>
+      <li>✅ Assistenza personale continua</li>
+    </ul>
+  </section>
 
-    <section id="contatti">
-      <h3 class="text-2xl font-semibold mb-6">Richiedi una consulenza gratuita</h3>
+  <!-- GLOSSARIO -->
+  <section class="glossario" data-aos="fade-left">
+    <h2>Glossario Energia</h2>
+    <ul>
+      <li><strong>PUN:</strong> Prezzo Unico Nazionale, valore base per la luce.</li>
+      <li><strong>PCV:</strong> Prezzo di commercializzazione vendita, quota fissa mensile.</li>
+      <li><strong>kWh:</strong> Unità di misura dell'energia consumata.</li>
+      <li><strong>Offerta PLACET:</strong> Offerta a condizioni standard stabilite da ARERA.</li>
+    </ul>
+  </section>
 
-      <form name="contatto" method="POST" data-netlify="true" enctype="multipart/form-data" class="bg-white p-6 rounded shadow-md space-y-4">
-        <!-- Necessario per Netlify Forms -->
-        <input type="hidden" name="form-name" value="contatto" />
+  <!-- NOTIZIE -->
+  <section class="notizie" data-aos="fade-up">
+    <h2>Ultime Notizie Energia</h2>
+    <article>
+      <h3>🔋 Luglio 2025 - Bollette giù del 10%</h3>
+      <p>Grazie alla riduzione del PUN, i prezzi dell'energia sono in calo. Approfitta ora per cambiare fornitore!</p>
+    </article>
+    <article>
+      <h3>⚡ Bonus bollette rinnovato</h3>
+      <p>Confermati gli sconti per le famiglie a basso reddito. Scopri se ne hai diritto.</p>
+    </article>
+    <article>
+      <h3>📉 Fine maggior tutela</h3>
+      <p>Dal 2024 si passa al mercato libero. È fondamentale scegliere un contratto trasparente.</p>
+    </article>
+  </section>
 
-        <div>
-          <label for="nome" class="block mb-1 font-medium">Nome e Cognome</label>
-          <input type="text" id="nome" name="nome" required class="w-full border border-gray-300 p-2 rounded" />
-        </div>
+  <!-- RISORSE UTILI -->
+  <section class="risorse" data-aos="fade-up">
+    <h2>Risorse Utili</h2>
+    <ul>
+      <li><a href="https://www.arera.it/" target="_blank">ARERA - Autorità energia</a></li>
+      <li><a href="https://www.ilportaleofferte.it/" target="_blank">Portale Offerte Luce e Gas</a></li>
+      <li><a href="https://konsulto.it" target="_blank">Konsulto.it</a></li>
+    </ul>
+  </section>
 
-        <div>
-          <label for="email" class="block mb-1 font-medium">Email</label>
-          <input type="email" id="email" name="email" required class="w-full border border-gray-300 p-2 rounded" />
-        </div>
+  <!-- FAQ -->
+  <section class="faq" data-aos="fade-up">
+    <h2>Domande Frequenti</h2>
+    <details>
+      <summary>Quanto costa la consulenza?</summary>
+      <p>La consulenza è gratuita e senza impegno.</p>
+    </details>
+    <details>
+      <summary>Posso avere un preventivo personalizzato?</summary>
+      <p>Sì, ti fornirò un confronto dettagliato in base alla tua bolletta.</p>
+    </details>
+    <details>
+      <summary>Posso cambiare fornitore anche se ho un contratto attivo?</summary>
+      <p>Certo, è sempre possibile cambiare gratuitamente, salvo clausole specifiche.</p>
+    </details>
+  </section>
 
-        <div>
-          <label for="oggetto" class="block mb-1 font-medium">Oggetto</label>
-          <input type="text" id="oggetto" name="oggetto" required class="w-full border border-gray-300 p-2 rounded" />
-        </div>
+  <!-- CONTATTO -->
+  <section class="contatto" id="contatto" data-aos="fade-up">
+    <h2>Contattami Ora</h2>
+    <form action="invia.php" method="post" enctype="multipart/form-data">
+      <label for="nome">Nome:</label>
+      <input type="text" name="nome" id="nome" required />
 
-        <div>
-          <label for="messaggio" class="block mb-1 font-medium">Messaggio</label>
-          <textarea id="messaggio" name="messaggio" rows="4" class="w-full border border-gray-300 p-2 rounded"></textarea>
-        </div>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required />
 
-        <div>
-          <label for="allegato" class="block mb-1 font-medium">Allega una bolletta (PDF, JPG, PNG)</label>
-          <input type="file" id="allegato" name="allegato" accept=".pdf,.jpg,.jpeg,.png" class="w-full" />
-        </div>
+      <label for="messaggio">Messaggio:</label>
+      <textarea name="messaggio" id="messaggio" rows="5" required></textarea>
 
-        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-          Invia Richiesta
-        </button>
-      </form>
-    </section>
-  </main>
+      <label for="file">Carica una bolletta (PDF, JPG, PNG):</label>
+      <input type="file" name="file" id="file" accept=".pdf,.jpg,.png" />
 
-  <footer class="bg-white mt-16 p-6 text-center text-sm text-gray-500">
-    © 2025 Luca Staurenghi · <a href="mailto:l.staurenghi@konsulto.it" class="text-blue-600 hover:underline">l.staurenghi@konsulto.it</a>
+      <button type="submit">Invia Richiesta</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer data-aos="fade-up">
+    <p>&copy; 2025 Luca Staurenghi - Tutti i diritti riservati</p>
+    <p>Consulente Energia per Konsulto.it | <a href="mailto:l.staurenghi@konsulto.it">l.staurenghi@konsulto.it</a></p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Cookie Policy</a></p>
   </footer>
-<script src="/script.js"></script>
+
+  <!-- SCRIPT AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
